@@ -1,0 +1,264 @@
+body {
+    /*css de toda a página*/
+    font-family: Arial, Helvetica, sans-serif;
+    clear: both;
+    background-color: #fff5f3;
+}
+
+.logo {
+    /*css da imagem no inicio*/
+    width: auto;
+    height: 300px;
+    margin: 10px;
+}
+
+#logo {
+    /*css da imagem no inicio*/
+    text-align: center;
+}
+
+.menu-p {
+    /*css do menu principal*/
+    background-color: bisque;
+    height: 50px;
+}
+
+.menu-p a {
+    /*css do texto no menu principal*/
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 0px 20px;
+}
+
+.menu-p ul {
+    /*css da lista no menu principal*/
+    width: 90%;
+    text-align: center;
+}
+
+.semijoias,
+.artigos {
+    /*css da lista no menu principal*/
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.semijoias li,
+.artigos li {
+    /*css da sub-lista no menu principal*/
+    background-color: rgb(253, 217, 173);
+    width: 25%;
+}
+
+.menu-p a:hover {
+    /*css do texto no menu principal ao passar o mouse*/
+    background-color: rgb(243, 229, 211, .9);
+}
+
+.li-p {
+    /*css da lista no menu principal*/
+    line-height: 50px;
+    float: left;
+    width: 25%;
+}
+
+
+/**/
+
+.botao-menu {
+    /*css para esconder o menu lateral quando: janela = +802px*/
+    visibility: hidden;
+    display: none;
+}
+
+@media (max-width: 802px) {
+    /*css do menu lateral quando: janela = -802px*/
+    .menu-p {
+        /*css para esconder o menu principal quando: janela = -802px*/
+        visibility: hidden;
+        display: none;
+    }
+    .botao-menu {
+        /*css do menu lateral*/
+        display: inline-block;
+        visibility: visible;
+    }
+    .icone-menu {
+        /*css da imagem do menu lateral*/
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        margin-bottom: 0px;
+    }
+    .menu {
+        /*css da lista no menu lateral*/
+        margin-left: -500%;
+        width: 500px;
+    }
+    .menu ul {
+        /*css da lista no menu lateral*/
+        list-style: none;
+        position: absolute;
+    }
+    .menu ul ul {
+        /*css da sub-lista no menu lateral*/
+        visibility: hidden;
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.8s;
+        width: 100%;
+    }
+    .menu ul li {
+        /*css da lista no menu lateral*/
+        width: 100%;
+        float: none;
+    }
+    .menu ul li:hover ul {
+        /*css da lista no menu lateral ao passar o mouse*/
+        height: auto;
+        max-height: 400px;
+        visibility: visible;
+    }
+    .menu ul ul li {
+        /*css da sub-lista no menu lateral*/
+        float: none;
+    }
+    .menu ul ul li a {
+        /*css do texto na sub-lista no menu lateral*/
+        background-color: rgb(253, 217, 173);
+        text-align: center;
+    }
+    .menu a {
+        /*css do texto na sub-lista no menu lateral*/
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        text-align: right;
+        background-color: bisque;
+        color: black;
+        cursor: pointer;
+    }
+    .menu a:hover {
+        /*css do texto na sub-lista no menu lateral ao passar o mouse*/
+        background-color: rgb(243, 229, 211);
+        text-align: left;
+    }
+    #bt-menu {
+        /*css do botão do menu lateral*/
+        display: none;
+        position: absolute;
+        text-align: center;
+    }
+    .botao-menu {
+        /*css do botão do menu lateral*/
+        block-size: 15px;
+        position: absolute;
+        z-index: 1;
+    }
+    #bt-menu:checked~.menu {
+        /*css do funcionamento do botão do menu lateral*/
+        margin-left: 0;
+    }
+}
+
+main h1 {
+    /*css dos títulos principais*/
+    background-color: #eee1b1;
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    /*css dos títulos secundários*/
+    background-color: #f0d7aa;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#produtos {
+    /*css dos produtos*/
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    background-color: #dfd1b7;
+}
+
+#produtos:hover {
+    /*css dos produtos ao passar o mouse*/
+    cursor: pointer;
+}
+
+.img-produtos {
+    /*css das imagens dos produtos*/
+    width: 210px;
+    height: 210px;
+}
+
+.texto-produtos {
+    /*css dos textos dos produtos*/
+    text-align: center;
+    width: 210px;
+    display: block;
+}
+
+.sem-estoque {
+    /*css das imagem que aparece quando não há itens*/
+    margin-left: 10px;
+    width: 200px;
+    height: auto;
+}
+
+.redes {
+    /*css do menu de conexão com outras redes*/
+    list-style: none;
+    margin: 1px;
+    display: inline-block;
+}
+
+.redes h1 {
+    /*css do título do menu de conexão*/
+    background-color: #e7d7b8;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    width: 170px;
+}
+
+.redes li a {
+    /*css do texto do menu de conexão*/
+    margin-left: 1px;
+}
+
+.redes-sociais {
+    /*css das imagens do menu de conexão*/
+    width: 40px;
+    height: auto;
+    float: left;
+}
+
+.rodape-pagina {
+    /*css do rodapé da página*/
+    color: black;
+    background-color: white;
+    padding: 5px;
+}
+
+
+/*
+    cores do ícone no "head":
+    branco:HEX : #ffffff / RGB : 255, 255, 255 / HSL  : 360, 0%, 100%
+    fundo: HEX : #fef9f5 / RGB : 254, 249, 245 / HSL  : 26, 81%, 97%
+    letras: HEX : #c2b68b / RGB : 194, 182, 139 / HSL  : 46, 31%, 65%
+    siglas:HEX : #ceb98f / RGB : 206, 185, 143 / HSL  : 39, 39%, 68%
+*/
