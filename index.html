@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <!--menu lateral que aparece quando minimiza a largura da janela para 802px-->
+    <!--menu lateral que aparece quando minimiza a largura da janela para menos de 600px-->
     <nav class="botao-menu">
         <input type="checkbox" id="bt-menu">
         <label for="bt-menu"><img class="icone-menu" src="png/icone-menu.png" alt="menu"></label>
         <nav class="menu">
             <ul>
-                <li><a href="#">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li>
-                    <a href="#">Semijóias &#9660;</a>
+                    <a href="#semijoias">Semijóias &#9660;</a>
                     <ul>
                         <li><a href="#">Pulseiras</a></li>
                         <li><a href="#">Colares</a></li>
@@ -33,7 +33,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Artigos de couro &#9660;</a>
+                    <a href="#artigos-de-couro">Artigos de couro &#9660;</a>
                     <ul>
                         <li><a href="#">Chaveiros</a></li>
                         <li><a href="#">Bolsas</a></li>
@@ -42,6 +42,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Contatos</a></li>
+                <!--mudar para contatos.html-->
             </ul>
         </nav>
     </nav>
@@ -52,7 +53,7 @@
         </figure>
         <nav class="menu-p">
             <ul>
-                <li class="li-p"><a href="#">Início</a></li>
+                <li class="li-p"><a href="index.html">Início</a></li>
                 <li class="li-p">
                     <a href="javascript://" class="bt-semijoias">Semijóias &#9660;</a>
                     <ul class="semijoias">
@@ -75,128 +76,155 @@
                     </ul>
                 </li>
                 <li class="li-p"><a href="#">Contatos</a></li>
+                <!--mudar para contatos.html-->
             </ul>
         </nav>
 
     </header>
     <main>
         <!--tela inicial de página com os produtos-->
-        <h1>
+        <h1 id="semijoias">
             SEMIJÓIAS
         </h1>
+        <div class="grid-container">
+            <div>
+                <h2>
+                    Pulseiras
+                </h2>
+                <figure id="produtos">
+                    <img src="png/pulseira-rv.png" alt="Pulseira Riviera Color" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            Pulseira Riviera Color<br>Cor: Dourado / Ródio branco<br>Valor: R$ 148,00
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Colares
+                </h2>
+                <figure id="produtos">
+                    <img src="png/colar-cp.png" alt="Colar Crucifixo de Pérolas" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            Colar Crucifixo de Pérolas<br>Cor: Dourado<br>Valor: R$ 120,00
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Brincos
+                </h2>
+                <figure id="produtos">
+                    <img src="png/brinco.png" alt="Brinco comum" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            Brinco<br>Cor: Ródio Branco / Dourado / Ródio Negro<br>Valor: R$ 65,00
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure id="produtos">
+                    <img src="png/brinco-fc.png" alt="Brinco Festa Cravejado" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            <br>Brinco Festa Cravejado<br>Cor: Ródio Branco<br>Valor: R$ 210,00
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Anéis
+                </h2>
+                <figure>
+                    <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Tiáras
+                </h2>
+                <figure>
+                    <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Conjuntos
+                </h2>
+                <figure id="produtos">
+                    <img src="png/conjunto-cbpn.png" alt="Conjunto de Colar e Brinco de Pedras Naturais" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            Conjunto de Colar e Brinco de Pedras Naturais<br>Cor: Dourado<br>Valor: R$ 315,00
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="last-grid-container">
+            <div>
+                <h2>
+                    Tornozeleiras
+                </h2>
+                <figure>
+                    <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
+                </figure>
+            </div>
+        </div>
 
-        <h2>
-            Pulseiras
-        </h2>
-        <figure id="produtos">
-            <img src="png/pulseira-rv.png" alt="Pulseira Riviera Color" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    Pulseira Riviera Color<br>Cor: Dourado / Ródio branco<br>Valor: R$ 148,00
-                </p>
-            </figcaption>
-        </figure>
-        <h2>
-            Colares
-        </h2>
-        <figure id="produtos">
-            <img src="png/colar-cp.png" alt="Colar Crucifixo de Pérolas" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    Colar Crucifixo de Pérolas<br>Cor: Dourado<br>Valor: R$ 120,00
-                </p>
-            </figcaption>
-        </figure>
-        <h2>
-            Brincos
-        </h2>
-        <figure id="produtos">
-            <img src="png/brinco.png" alt="Brinco comum" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    Brinco<br>Cor: Ródio Branco / Dourado / Ródio Negro<br>Valor: R$ 65,00
-                </p>
-            </figcaption>
-        </figure>
-        <figure id="produtos">
-            <img src="png/brinco-fc.png" alt="Brinco Festa Cravejado" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    <br>Brinco Festa Cravejado<br>Cor: Ródio Branco<br>Valor: R$ 210,00
-                </p>
-            </figcaption>
-        </figure>
-        <h2>
-            Anéis
-        </h2>
-        <figure>
-            <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
-        </figure>
-        <h2>
-            Tiáras
-        </h2>
-        <figure>
-            <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
-        </figure>
-        <h2>
-            Conjuntos
-        </h2>
-        <figure id="produtos">
-            <img src="png/conjunto-cbpn.png" alt="Conjunto de Colar e Brinco de Pedras Naturais" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    Conjunto de Colar e Brinco de Pedras Naturais<br>Cor: Dourado<br>Valor: R$ 315,00
-                </p>
-            </figcaption>
-        </figure>
-        <h2>
-            Tornozeleiras
-        </h2>
-        <figure>
-            <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
-        </figure>
-
-        <h1>
+        <h1 id="artigos-de-couro">
             ARTIGOS DE COURO
         </h1>
-
-        <h2>
-            Chaveiros
-        </h2>
-        <figure>
-            <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
-        </figure>
-        <h2>
-            Bolsas
-        </h2>
-        <figure id="produtos">
-            <img src="png/bolsa-m.png" alt="Bolsa em couro metalizada, com duas opções de alça" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    Bolsa em couro metalizada, com duas opções de alça<br>Cor: Metalizada<br>Valor: R$ 599,99
-                </p>
-            </figcaption>
-        </figure>
-        <figure id="produtos">
-            <img src="png/bolsa-a.png" alt="Bolsa em couro metalizada, alça corrente" class="img-produtos">
-            <figcaption class="texto-produtos">
-                <p>
-                    Bolsa em couro metalizada, alça corrente<br>Cor: Metalizada azul<br>Valor: R$ 369,99
-                </p>
-            </figcaption>
-        </figure>
-        <h2>
-            Porta-cartões
-        </h2>
-        <figure>
-            <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
-        </figure>
-        <h2>
-            Carteiras
-        </h2>
-        <figure>
-            <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
-        </figure>
+        <div class="grid-container">
+            <div>
+                <h2>
+                    Chaveiros
+                </h2>
+                <figure>
+                    <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Bolsas
+                </h2>
+                <figure id="produtos">
+                    <img src="png/bolsa-m.png" alt="Bolsa em couro metalizada, com duas opções de alça" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            Bolsa em couro metalizada, com duas opções de alça<br>Cor: Metalizada<br>Valor: R$ 599,99
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure id="produtos">
+                    <img src="png/bolsa-a.png" alt="Bolsa em couro metalizada, alça corrente" class="img-produtos">
+                    <figcaption class="texto-produtos">
+                        <p>
+                            Bolsa em couro metalizada, alça corrente<br>Cor: Metalizada azul<br>Valor: R$ 369,99
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Porta-cartões
+                </h2>
+                <figure>
+                    <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
+                </figure>
+            </div>
+            <div>
+                <h2>
+                    Carteiras
+                </h2>
+                <figure>
+                    <img src="png/sem-estoque.png" alt="Não há itens para esse produto" class="sem-estoque">
+                </figure>
+            </div>
+        </div>
     </main>
 
     <aside class="redes">
@@ -208,16 +236,10 @@
             <li>
                 <a href="https://www.google.com/maps/d/u/0/embed?mid=15n-JSfPbdBWiUXYxbGsE0WbnhjeWt4YT" width="640" height="480">
                     <img src="png/localizacao.png" alt="Localização" class="redes-sociais"></a>
-            </li>
-            <li>
                 <a href="https://api.whatsapp.com/send?phone=559491521624&text=Oi%2C%20vim%20pelo%20site. ">
                     <img src="png/whatsapp.png" alt="Whatsapp" class="redes-sociais"></a>
-            </li>
-            <li>
                 <a href="https://www.instagram.com/beatrizgodoyacessorios/">
                     <img src="png/instagram.png" alt="Instagram" class="redes-sociais"></a>
-            </li>
-            <li>
                 <a href="mailto:Beatriz-godoy@hotmail.com">
                     <img src="png/email.png" alt="E-mail" class="redes-sociais"></a>
             </li>

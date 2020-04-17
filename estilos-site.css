@@ -1,14 +1,13 @@
 body {
     /*css de toda a página*/
     font-family: Arial, Helvetica, sans-serif;
-    clear: both;
     background-color: #fff5f3;
 }
 
 .logo {
     /*css da imagem no inicio*/
-    width: auto;
     height: 300px;
+    width: auto;
     margin: 10px;
 }
 
@@ -21,6 +20,10 @@ body {
     /*css do menu principal*/
     background-color: bisque;
     height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
 }
 
 .menu-p a {
@@ -28,12 +31,11 @@ body {
     text-decoration: none;
     color: black;
     display: block;
-    padding: 0px 20px;
 }
 
 .menu-p ul {
     /*css da lista no menu principal*/
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 
@@ -62,21 +64,25 @@ body {
     line-height: 50px;
     float: left;
     width: 25%;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-
-/**/
+.li-p a {
+    /*css da lista no menu principal*/
+    column-width: 100%;
+}
 
 .botao-menu {
-    /*css para esconder o menu lateral quando: janela = +802px*/
+    /*css para esconder o menu lateral quando: janela = +600px*/
     visibility: hidden;
     display: none;
 }
 
-@media (max-width: 802px) {
-    /*css do menu lateral quando: janela = -802px*/
+@media (max-width: 600px) {
+    /*css do menu lateral quando: janela = -600px*/
     .menu-p {
-        /*css para esconder o menu principal quando: janela = -802px*/
+        /*css para esconder o menu principal quando: janela = -600px*/
         visibility: hidden;
         display: none;
     }
@@ -84,6 +90,10 @@ body {
         /*css do menu lateral*/
         display: inline-block;
         visibility: visible;
+        block-size: 15px;
+        z-index: 1;
+        position: fixed;
+        top: 0px;
     }
     .icone-menu {
         /*css da imagem do menu lateral*/
@@ -152,12 +162,6 @@ body {
         position: absolute;
         text-align: center;
     }
-    .botao-menu {
-        /*css do botão do menu lateral*/
-        block-size: 15px;
-        position: absolute;
-        z-index: 1;
-    }
     #bt-menu:checked~.menu {
         /*css do funcionamento do botão do menu lateral*/
         margin-left: 0;
@@ -167,7 +171,7 @@ body {
 main h1 {
     /*css dos títulos principais*/
     background-color: #eee1b1;
-    font-size: 35px;
+    font-size: 40px;
     padding: 10px;
     text-align: center;
     margin-top: 10px;
@@ -177,11 +181,42 @@ main h1 {
 main h2 {
     /*css dos títulos secundários*/
     background-color: #f0d7aa;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 35px;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.grid-container {
+    /*css das grades dos produtos*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 20px;
+    grid-gap: 0px;
+}
+
+.grid-container>div {
+    /*css das grades dos produtos, que não afeta o css dos produtos*/
+    text-align: center;
+    padding: 0 1px;
+    font-size: 30px;
+    border: #f0d7aa 1px solid;
+}
+
+.last-grid-container {
+    /*css das ultimas grades ímpares dos produtos*/
+    display: grid;
+    grid-template-columns: 100%;
+    padding-bottom: 20px;
+    grid-gap: 0px;
+}
+
+.last-grid-container>div {
+    /*css das ultimas grades ímpares dos produtos, que não afeta o css dos produtos*/
+    text-align: center;
+    padding: 0 1px;
+    font-size: 30px;
+    border: #f0d7aa 1px solid;
 }
 
 #produtos {
@@ -199,15 +234,16 @@ main h2 {
 
 .img-produtos {
     /*css das imagens dos produtos*/
-    width: 210px;
-    height: 210px;
+    width: 190px;
+    height: 190px;
 }
 
 .texto-produtos {
     /*css dos textos dos produtos*/
-    text-align: center;
-    width: 210px;
     display: block;
+    text-align: center;
+    width: 190px;
+    font-size: 20px;
 }
 
 .sem-estoque {
@@ -220,35 +256,40 @@ main h2 {
 .redes {
     /*css do menu de conexão com outras redes*/
     list-style: none;
-    margin: 1px;
-    display: inline-block;
+    display: block;
+    margin: 50px auto 100px auto;
+    width: 100%;
+    text-align: center;
+    background-color: #e7d7b8;
 }
 
 .redes h1 {
     /*css do título do menu de conexão*/
-    background-color: #e7d7b8;
-    font-size: 20px;
-    padding: 5px;
+    background-color: #e2d2b3;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    width: 170px;
+    margin: 200px auto 10px auto;
+    width: 200px;
 }
 
 .redes li a {
     /*css do texto do menu de conexão*/
-    margin-left: 1px;
+    margin: 3px;
 }
 
 .redes-sociais {
     /*css das imagens do menu de conexão*/
     width: 40px;
     height: auto;
-    float: left;
 }
 
 .rodape-pagina {
     /*css do rodapé da página*/
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     color: black;
     background-color: white;
     padding: 5px;
