@@ -1,0 +1,233 @@
+html {
+    /*css de toda a página*/
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff5f3;
+}
+
+.menu-p {
+    /*css do menu principal*/
+    background-color: bisque;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+}
+
+.menu-p a {
+    /*css do texto no menu principal*/
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.menu-p ul {
+    /*css da lista no menu principal*/
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+
+.semijoias,
+.artigos {
+    /*css da lista no menu principal*/
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    max-height: 0;
+    width: 100%;
+}
+
+.semijoias li,
+.artigos li {
+    /*css da sub-lista no menu principal*/
+    background-color: rgb(253, 217, 173);
+    width: 100%;
+    float: none;
+}
+
+.li-p {
+    /*css da lista no menu principal*/
+    line-height: 50px;
+    float: left;
+    width: 25%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.li-p:hover ul {
+    /*css da lista no menu lateral ao passar o mouse*/
+    height: auto;
+    max-height: 400px;
+    visibility: visible;
+}
+
+.botao-menu {
+    /*css para esconder o menu lateral quando: janela=+600px*/
+    visibility: hidden;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    /*css do menu lateral quando: janela = -600px*/
+    .menu-p {
+        /*css para esconder o menu principal quando: janela = -600px*/
+        visibility: hidden;
+        display: none;
+    }
+    .botao-menu {
+        /*css do menu lateral*/
+        display: inline-block;
+        visibility: visible;
+        block-size: 15px;
+        z-index: 1;
+        position: fixed;
+        top: 0px;
+    }
+    .icone-menu {
+        /*css da imagem do menu lateral*/
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        margin-bottom: 0px;
+    }
+    .menu {
+        /*css da lista no menu lateral*/
+        margin-left: -500%;
+        width: 500px;
+    }
+    .menu ul {
+        /*css da lista no menu lateral*/
+        list-style: none;
+        position: absolute;
+    }
+    .menu ul ul {
+        /*css da sub-lista no menu lateral*/
+        visibility: hidden;
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.8s;
+        width: 100%;
+    }
+    .menu ul li {
+        /*css da lista no menu lateral*/
+        width: 100%;
+        float: none;
+    }
+    .menu ul li:hover ul {
+        /*css da lista no menu lateral ao passar o mouse*/
+        height: auto;
+        max-height: 400px;
+        visibility: visible;
+    }
+    .menu ul ul li {
+        /*css da sub-lista no menu lateral*/
+        float: none;
+    }
+    .menu ul ul li a {
+        /*css do texto na sub-lista no menu lateral*/
+        background-color: rgb(253, 217, 173);
+        text-align: center;
+    }
+    .menu a {
+        /*css do texto na sub-lista no menu lateral*/
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        text-align: right;
+        background-color: bisque;
+        color: black;
+        cursor: pointer;
+    }
+    .menu a:hover {
+        /*css do texto na sub-lista no menu lateral ao passar o mouse*/
+        background-color: rgb(243, 229, 211);
+        text-align: left;
+    }
+    #bt-menu {
+        /*css do botão do menu lateral*/
+        display: none;
+        position: absolute;
+        text-align: center;
+    }
+    #bt-menu:checked~.menu {
+        /*css do funcionamento do botão do menu lateral*/
+        margin-left: 0;
+    }
+}
+
+.redes {
+    /*css do menu de conexão com outras redes*/
+    list-style: none;
+    display: block;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    background-color: #e7d7b8;
+}
+
+.redes h1 {
+    /*css do título do menu de conexão*/
+    background-color: #e2d2b3;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin: 60px auto 0px auto;
+    width: 95%;
+    text-decoration: none;
+    color: black;
+}
+
+.redes nav {
+    /*css do texto do menu de conexão*/
+    background-color: #e7d7b8;
+}
+
+.lista-redes {
+    /*css das grades dos conexão*/
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-top: 5px;
+    grid-gap: 0px;
+}
+
+.lista-redes>li {
+    /*css das grades dos conexão, que não afeta o css dos .lista-redes-1, ...-2 e ...-3*/
+    text-align: center;
+}
+
+.lista-redes-1 {
+    font-size: 9px;
+}
+
+.redes-sociais {
+    /*css das imagens do menu de conexão*/
+    width: 45px;
+    height: auto;
+}
+
+.logo {
+    /*css da imagem no final*/
+    height: 300px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+#logo {
+    /*css da imagem no final*/
+    text-align: center;
+}
+
+.rodape-pagina {
+    /*css do rodapé da página*/
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 5px;
+}
